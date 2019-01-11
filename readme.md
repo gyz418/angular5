@@ -17,3 +17,6 @@
 
 main.ts 主文件，引入 app.modules.ts 模块文件， 模块文件再加载各组件 app.components.ts
 
+>cmd: `ng generate component test`  创建组件
+
+

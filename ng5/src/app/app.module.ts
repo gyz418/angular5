@@ -3,16 +3,19 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { TestComponent } from './test/test.component';
 
 
 @NgModule({
+  // 组装模块资源：组件、指令、服务
   declarations: [
-    AppComponent
+    AppComponent,
+    TestComponent
   ],
-  imports: [
+  imports: [  // 依赖模块
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent]  // 指定启动的根组件
 })
 export class AppModule { }

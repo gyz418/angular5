@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+// angular中 组件就是一个类 class
+
 // 装饰器
 @Component({
   selector: 'app-root',
@@ -8,7 +10,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app123456';
-  count = 0;
+  public count:number = 0;
   increment=function () {
     this.count++
   }
