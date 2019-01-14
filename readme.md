@@ -7,7 +7,8 @@
 
 > `npm i -g @angular/cli@1.6.4`  指定版本
 
-> `npm i -g @angular-devkit/core`  1.6.4版本缺这个
+> `npm i -g @angular-devkit/core`  1.6.4版本缺这个 这个应用不用
+>  `@angular-devkit/core": "^7.2.1"`  1.6.4 手动加包  
 
 > `ng -v` 
 

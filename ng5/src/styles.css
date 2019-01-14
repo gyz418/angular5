@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+/*
+这里是全局样式
+引入第三方包时，可以不写node_modules路径，只写包名称路径
+@import url("todomvc-common/base.css");
+
+*/
+.flex {
+  display: flex;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
