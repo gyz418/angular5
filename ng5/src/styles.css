@@ -5,6 +5,11 @@
 @import url("todomvc-common/base.css");
 
 */
+body, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
 .flex {
   display: flex;
 }

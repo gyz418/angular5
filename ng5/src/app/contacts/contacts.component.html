@@ -1,0 +1,16 @@
+<div class="a">
+  <div class="flex-between">
+    <p>列表</p>
+    <button routerLink="/contacts/new">new</button>
+  </div>
+  <div *ngFor="let val of list;let i=index" class="flex-between list">
+    <p>{{i+1}}</p>
+    <p>{{val.name}}</p>
+    <p>{{val.age}}</p>
+    <div>
+      <!--<button routerLink="/contacts/edit">edit</button>-->
+      <button [routerLink]='["/contacts/edit",val.id]'>edit</button>  <!-- 参数数组 -->
+      <button (click)="del(val.id)">del</button>
+    </div>
+  </div>
+</div>

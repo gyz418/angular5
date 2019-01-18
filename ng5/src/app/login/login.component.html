@@ -1,0 +1,51 @@
+<!-- 最简 -->
+<!--
+  <input name="email" type="text" placeholder="email" [(ngModel)]="email"> <br>
+  <input name="pwd"  type="password" placeholder="password" [(ngModel)]="pwd"> <br>
+  <button (click)="login()">login</button>
+-->
+<p> login</p>
+<form #form="ngForm" (submit)="submit()">  <!-- 加了form 标签，就要name 属性  #emails 和 ngModel的值不能相同-->
+  <input
+    class="common"
+    name="email"
+    required
+    #email="ngModel"
+    type="email"
+    email="true"
+    placeholder="email"
+    [(ngModel)]="obj.email"> <br>
+  <div *ngIf="email.invalid && (email.dirty || email.touched)"
+       class="alert alert-danger">
+
+    <div *ngIf="email?.errors.required">   <!-- 真奇葩-->
+      emails is required.
+    </div>
+    <div *ngIf="email?.errors.email">
+      Invalid Email.
+    </div>
+  </div>
+
+  <input name="pwd"
+         class="common"
+         required
+         #pwd="ngModel"
+         type="password"
+         placeholder="password"
+         [(ngModel)]="obj.pwd"
+         minlength="6"
+  > <br>
+
+  <div *ngIf="pwd.invalid && (pwd.dirty || pwd.touched)"
+       class="alert alert-danger">
+    <div *ngIf="pwd?.errors.required">
+      pwd is required.
+    </div>
+    <div *ngIf="pwd?.errors.minlength">
+      Password minlength 6.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="!form.form.valid">login</button>
+  <!--{{emails.className}}-->
+</form>
